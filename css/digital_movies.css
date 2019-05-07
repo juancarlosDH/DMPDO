@@ -1,0 +1,311 @@
+*{
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+ul{
+    margin-bottom: 0;
+}
+
+body{
+  background-image: url('../images/background.jpg');
+  background-size: 300px;
+  background-attachment: fixed;
+  filter: alpha(opacity=50);
+}
+
+.banner{
+  height: 90vh;
+  /* background-color: rgb(255, 255, 255); */
+  margin-bottom: 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.slide-caption{
+  width: 350px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  padding: 20px;
+  background: rgba(0,0,0, 0.7);
+  color: #000;
+}
+
+.slide-caption h2{
+  color: #e62117;
+  font-weight: bold;
+}
+.slide-caption a{
+  color: #e62117;
+  text-decoration: none !important;
+  font-weight: bold;
+  outline: none;
+}
+
+.container{
+  width: 960px;
+  margin: 60px auto;
+}
+
+#menu-toggle{
+  display: none;
+}
+.img-menu{
+  width: 30px;
+}
+#menu-check{
+  display: none;
+}
+
+
+header{
+  background-color: rgba(255,255,255, 0.3);
+  position: relative;
+}
+
+.container header {
+  background-color: rgb(202,75,75);
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: visible;
+  z-index: 50;
+}
+
+.navigation{
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  transition: 500ms;
+}
+
+.navigation-ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.navigation-ul li{
+   display: inline-block;
+   padding: 10px;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+.navigation-ul li:hover{
+  box-sizing: border-box;
+  background-color: rgba(75,75,75,0.3);
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+}
+
+.derechos{
+  float: right;
+  margin-right: 3px;
+}
+
+.izquierdos{
+  float: left;
+}
+
+a.logo{
+    width: 64px;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+a.logo img{
+    width: 100%
+}
+
+
+.principal{
+  margin-top: 67px;
+}
+
+
+
+.img-menu, #menu-check{
+
+}
+
+
+article{
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.peliculas{
+  background-color: #252525;
+  border-radius: 5px;
+  padding: 15px 15px 25px 15px;
+  overflow: hidden;
+}
+
+.pelicula{
+  width: 300px;
+  position: relative;
+  float: left;
+  margin: 0 5px;
+}
+
+.pelicula img.peli-img{
+  width: 100%;
+  opacity: 0.6;
+  transition:300ms;
+  height: 190px;
+}
+
+.pelicula:hover img.peli-img{
+  opacity: 1;
+}
+
+.pelicula img.banderin{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 65px;
+}
+.pelicula h3.peli-titulo{
+  text-align: center;
+  margin: 10px 0;
+  position: absolute;
+  top: 110px;
+  width: 100%;
+}
+
+.pelicula h4{
+  text-align: center;
+  margin: 10px 0;
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  background: #ccc;
+  opacity: 0.5;
+  color:black;
+}
+
+.form-group label{
+    font-weight: bolder;
+}
+
+.form-group div.invalid-feedback{
+    font-weight: bolder;
+}
+
+@media( max-width:768px ){
+  .container{
+    width: 100vw;
+    margin-top: -40px;
+  }
+  .nuevas{
+    margin-top: 145px;
+  }
+  .container header{
+    top: 10px;
+  }
+  .pelicula{
+    width: 49%;
+    margin: 0;
+  }
+  .pelicula:nth-child(even){
+    margin-right: 2%;
+  }
+  .banner{
+    display: none;
+  }
+
+  #menu-toggle{
+    float: right;
+    display: inline-block;
+  }
+  .img-menu{
+    display: inline-block;
+    width: 50px;
+  }
+
+  #menu-check:checked ~ .navigation{
+    /*display: block;*/
+    top: 50px;
+    right: 0;
+  }
+
+  .navigation{
+    position: absolute;
+    top: 50px;
+    right: -300px;
+    width: 100%;
+  }
+
+  .izquierdos{
+    margin-top: 15px;
+  }
+
+  .derechos, .izquierdos{
+    clear: both;
+    float: right;
+    margin-right: 0;
+  }
+
+  .logo{
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+  }
+
+  .navigation-ul{
+    background-color: rgba(24,24,24,.9);
+    width: 300px;
+    text-align:right;
+    /* display: none; */
+  }
+  .container nav ul li{
+    display: block;
+  }
+
+}
+
+
+@media(max-width:520px){
+  .pelicula{
+    width: 100%;
+    min-height: 190px;
+  }
+
+  .pelicula img.peli-img{
+    height: auto;
+  }
+
+  .peliculas h4{
+    top:auto;
+    bottom: 20px;
+  }
+
+  .pelicula h3.peli-titulo {
+    top:auto;
+    bottom: 50px;
+  }
+
+}
