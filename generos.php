@@ -1,44 +1,27 @@
 <?php
-try{
-    $opt= [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+    require('conexion.php');
 
-    $conex = new PDO('mysql:host=localhost;dbname=movies_db', 'juancarlos', '123456', $opt);
-    //echo '<pre>';
-    // var_dump($conex);
-
-    //$query = $conex->query('SELECT * FROM genres WHERE ranking >= 10');
     $query = $conex->query('SELECT * FROM genres');
 
     $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
 
-}catch(PDOException $e){
-    echo 'No me pude conectar a la BD<br>';
-    echo $e->getMessage();
-}
+     require_once('plantilla/header.php');
+     require_once('plantilla/menu.php');
+  ?>
+    <section class="principal">
+        <article class="nuevas" id="peliculas">
+            <div class="peliculas">
+                <h2>Generos en Digital Movies</h2>
 
-?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <ul>
-            <?php
-                foreach ($resultados as $genero) {
-                    echo '<li>'.$genero['name'].'</li>';
-                }
-            ?>
-        </ul>
-    </body>
-
-
-
-
-
-
-
-
-
-</html>
+                <ul>
+                <?php
+                    foreach ($resultados as $genero) {
+                        echo '<li>'.$genero['name'].'</li>';
+                    }
+                ?>
+                </ul>
+            </div>
+        </article>
+    </section>
+<?php
+require_once('plantilla/footer.php'); ?>
