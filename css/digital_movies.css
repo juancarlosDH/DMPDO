@@ -58,6 +58,7 @@ body{
 .container{
   width: 960px;
   margin: 60px auto;
+  padding: 0;
 }
 
 #menu-toggle{
@@ -154,6 +155,7 @@ article{
 h2{
   font-size: 22px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .peliculas{
@@ -193,6 +195,8 @@ h2{
   position: absolute;
   top: 110px;
   width: 100%;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .pelicula h4{
@@ -204,6 +208,8 @@ h2{
   background: #ccc;
   opacity: 0.5;
   color:black;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .form-group label{
@@ -212,6 +218,10 @@ h2{
 
 .form-group div.invalid-feedback{
     font-weight: bolder;
+}
+
+input#rememberme ~ label{
+    cursor: pointer;
 }
 
 @media( max-width:768px ){

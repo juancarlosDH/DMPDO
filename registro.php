@@ -9,7 +9,7 @@ if($_POST){
 
     $nombre = $_POST['name'];
     $email = $_POST['email'];
-    $pass = $_POST['password'];
+    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $validator = $conex->query("SELECT email FROM users WHERE email = '{$email}'");
     $cantidad = $validator->rowCount();

@@ -24,7 +24,7 @@
         }else{
             $nombreGenero = 'Sin Genero';
         }
-                            //imprimo el titulo de la peli y su genero
+        //imprimo el titulo de la peli y su genero
    echo '<a href="detallePelicula.php?id='.$peli['id'].'"><li>'.$peli['title'].' ('.$nombreGenero.')</li></a>';
                        }
                    ?>

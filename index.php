@@ -129,5 +129,5 @@
 
     </section>
 <?php
-requier_once('plantilla/footer.php');
+require_once('plantilla/footer.php');
  ?>
