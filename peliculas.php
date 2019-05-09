@@ -1,9 +1,13 @@
 <?php
     require('conexion.php');
 
-    $query = $conex->query('SELECT * FROM movies');
-
+    //preparo y ejecuto la consulta de las pelis
+    $query = $conex->prepare('SELECT * FROM movies');
+    $query->execute();
     $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    //preparo la consulta del genero
+    $queryGenero = $conex->prepare('SELECT * FROM genres WHERE id = ?');
 
      require_once('plantilla/header.php');
      require_once('plantilla/menu.php');
@@ -18,7 +22,7 @@
                        foreach ($resultados as $peli) {
                            //me traigo el genero de esta peli
         if(isset($peli['genre_id'])){
-            $queryGenero = $conex->query('SELECT * FROM genres WHERE id = '.$peli['genre_id']);
+            $queryGenero->execute([ $peli['genre_id'] ]);
             $genero = $queryGenero->fetch(PDO::FETCH_ASSOC);
             $nombreGenero = $genero['name'];
         }else{

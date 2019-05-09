@@ -17,6 +17,7 @@
       <li><a href="#">Series</a></li>
     </ul>
     <ul class="derechos navigation-ul">
+      <li><a href="buscador.php">Buscar</a></li>
       <li><a href="#">Mi Lista</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="registro.php">Registro</a></li>

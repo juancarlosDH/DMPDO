@@ -224,6 +224,10 @@ input#rememberme ~ label{
     cursor: pointer;
 }
 
+select, option{
+    color:black;
+}
+
 @media( max-width:768px ){
   .container{
     width: 100vw;
