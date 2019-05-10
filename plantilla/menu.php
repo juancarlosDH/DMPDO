@@ -11,16 +11,15 @@
 
   <nav class="navigation">
     <ul class="izquierdos navigation-ul">
-      <li><a href="#">Estrenos</a></li>
-      <li><a href="#">Recientes</a></li>
-      <li><a href="peliculas.php">Películas</a></li>
-      <li><a href="#">Series</a></li>
+      <a href="#"><li>Recientes</li></a>
+      <a href="peliculas.php"><li>Películas</li></a>
+      <a href="#"><li>Series</li></a>
     </ul>
     <ul class="derechos navigation-ul">
-      <li><a href="buscador.php">Buscar</a></li>
-      <li><a href="#">Mi Lista</a></li>
-      <li><a href="login.php">Login</a></li>
-      <li><a href="registro.php">Registro</a></li>
+      <a href="buscador.php"><li>Buscar</li></a>
+      <a href="#"><li>Mi Lista</li></a>
+      <a href="login.php"><li>Login</li></a>
+      <a href="registro.php"><li>Registro</li></a>
     </ul>
   </nav>
 </header>

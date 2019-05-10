@@ -1,0 +1,41 @@
+.card{
+      width: 33.33%;
+}
+
+.card-body .card-title, .card-body .card-text{
+  color: black;
+}
+
+a.page-link span{
+  color: #007bff;
+}
+
+.card {
+    width: 100%;
+}
+
+.breadcrumb{
+    background-color: transparent;
+}
+
+.card-img-top{
+  width: 10px;
+}
+
+@media (min-width: 576px){
+  .card-group>.card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 50%;
+  }
+}
+
+@media (min-width: 768px){
+  .card-group>.card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 33.33%;
+  }
+  .titulo-nav{
+    display:flex;
+    justify-content: space-between;
+  }
+}

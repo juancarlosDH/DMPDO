@@ -15,19 +15,23 @@ if (isset($_GET['tipo'])) {
     $tipo=$_GET['tipo'];
 
     if($tipo=='movies'){
-        $consulta="SELECT * FROM movies WHERE title LIKE ?";
+        $consulta="SELECT * FROM movies WHERE title LIKE ? AND
+        genre_id = ?";
     }else{
         $consulta="SELECT * FROM series WHERE title LIKE ?";
     }
 
     //if(!empty($_GET['genero'])){
     //     $consulta="SELECT * FROM {$tipo} WHERE title LIKE '%{$titulo}%'
-    //         AND genre_id = {$_GET['genero']}";
+    //         AND genre_id = {$_GET['']}";
     // }
 
     $query = $conex->prepare($consulta);
 
-    $query->execute( [ '%'.$titulo.'%' ] );
+    $query->execute( [
+      '%'.$titulo.'%',
+      $_GET['genero']
+    ] );
 
     //var_dump($query); die;
 

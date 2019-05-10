@@ -15,8 +15,14 @@ if($_POST){
     $cantidad = $validator->rowCount();
     // var_dump($cantidad);exit;
     if($cantidad==0){
-        $conex->query("INSERT INTO users (name, email, password)
-        VALUES ('{$nombre}', '{$email}', '{$pass}') ");
+        $query = $conex->prepare("INSERT INTO users (name, email, password)
+        VALUES ( :nombre, :mail, :passw) ");
+        $query->bindValue(':passw', $pass);
+        $query->bindValue(':nombre', $nombre);
+        $query->bindValue(':mail', $email);
+        // $query->bindValue(':release_date', '2019-01-01');
+        $query->execute();
+
 
     } else {
         $errorEmail = 'El mail existe';
