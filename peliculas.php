@@ -103,7 +103,10 @@
             <p class="card-text"><?= $peli['nombreGenero'] ?></p>
             <p class="card-text">Rating: <?= $peli['rating'] ?></p>
             <p class="card-text">Awards: <?= $peli['awards'] ?></p>
-            <p class="card-text"><a class="btn btn-primary" href="detallePelicula.php?id=<?= $peli['id'] ?>">Ver Mas</a></p>
+            <p class="card-text">
+              <a class="btn btn-primary" href="detallePelicula.php?id=<?= $peli['id'] ?>">Ver Mas</a>
+              <a class="btn btn-success" href="modificarPelicula.php?id=<?= $peli['id'] ?>">Editar</a>
+              </p>
           </div>
         </div>
       <?php } ?>
